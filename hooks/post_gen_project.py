@@ -10,7 +10,7 @@ try:
     sh.run(["git", "checkout", "-b", "main"], check=True)
 
     # create repository
-    sh.run(['git', 'remote', 'add', 'origin', 'https://github.com/{{ cookiecutter.archetype_org}}/{{ cookiecutter.archetype_id }}.git'], check=True)
+    sh.run(['git', 'remote', 'add', 'origin', '{{ cookiecutter.archetype_git }}'], check=True)
     
 except subprocess.CalledProcessError as err:
     print('Error:', err)
